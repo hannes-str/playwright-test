@@ -10,7 +10,10 @@ apt install npm
 npm install playwright
 ```
 
-- run test: 
+- run test as js: 
 ```
+npx tsc file.ts
 node file.js
+
 ```
+

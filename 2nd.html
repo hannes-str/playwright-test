@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About E2E Tests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #222;
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container input {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #162c3f;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .fact {
+            margin-bottom: 20px;
+            border: 1px solid #265c99;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #162c3f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+
+        .fact h2 {
+            color: #f39c12;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .fact p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fun Facts About E2E Tests</h1>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a fact...">
+    </div>
+
+    <div class="fact" id="fact1">
+        <h2>Fact #1</h2>
+        <p>E2E tests simulate real user interactions, covering the entire user journey from start to finish.</p>
+    </div>
+
+    <div class="fact" id="fact2">
+        <h2>Fact #2</h2>
+        <p>E2E tests help identify issues in complex user flows and integrations between different components of a
+            system.</p>
+    </div>
+
+    <div class="fact" id="fact3">
+        <h2>Fact #3</h2>
+        <p>Automated E2E tests can save time and effort compared to manual testing, especially for repetitive test
+            cases.</p>
+    </div>
+
+    <!-- Add more facts here -->
+
+    <div class="fact" id="fact4">
+        <h2>Fact #4</h2>
+        <p>E2E tests can be written using various testing frameworks like Cypress, TestCafe, Protractor, and Puppeteer.</p>
+    </div>
+
+    <div class="fact" id="fact5">
+        <h2>Fact #5</h2>
+        <p>Continuous Integration (CI) and Continuous Deployment (CD) pipelines often include E2E tests to ensure the
+            quality of the application before deployment.</p>
+    </div>
+
+    <div class="fact" id="fact6">
+        <h2>Fact #6</h2>
+        <p>E2E tests can be time-consuming to run, especially for large-scale applications, but they provide valuable
+            insights into application behavior.</p>
+    </div>
+
+    <div class="fact" id="fact7">
+        <h2>Fact #7</h2>
+        <p>Headless browsers like Chromium and Chrome can be used for faster E2E test execution without the need for a
+            visible browser window.</p>
+    </div>
+
+    <div class="fact" id="fact8">
+        <h2>Fact #8</h2>
+        <p>E2E tests should cover both happy paths (expected user flows) and edge cases to ensure comprehensive test
+            coverage.</p>
+    </div>
+
+    <div class="fact" id="fact9">
+        <h2>Fact #9</h2>
+        <p>Debugging failed E2E tests can be challenging due to their nature of interacting with the entire application
+            stack.</p>
+    </div>
+
+    <div class="fact" id="fact10">
+        <h2>Fact #10</h2>
+        <p>Despite their challenges, well-maintained E2E tests are a crucial part of ensuring the overall stability and
+            reliability of web applications.</p>
+    </div>
+
+    <div class="fact" id="fact11">
+        <h2>Fact #11</h2>
+        <p>E2E tests can be extended to include performance testing, making them even more valuable for assessing the
+            application's performance under real-world conditions.</p>
+    </div>
+
+    <div class="fact" id="fact12">
+        <h2>Fact #12</h2>
+        <p>Test data preparation and cleanup are essential for E2E tests to ensure consistent and reliable test
+            results.</p>
+    </div>
+
+    <div class="fact" id="fact13">
+        <h2>Fact #13</h2>
+        <p>E2E tests can be executed on different browsers and devices to verify cross-browser and cross-device
+            compatibility.</p>
+    </div>
+
+    <script>
+        // Function to filter facts based on the search input
+        function searchFacts() {
+            const searchInput = document.getElementById("searchInput");
+            const filter = searchInput.value.toLowerCase();
+            const facts = document.querySelectorAll(".fact");
+
+            facts.forEach(fact => {
+                const factContent = fact.textContent.toLowerCase();
+                if (factContent.includes(filter)) {
+                    fact.style.display = "block";
+                } else {
+                    fact.style.display = "none";
+                }
+            });
+        }
+
+        // Attach the searchFacts function to the "input" event of the search input
+        const searchInput = document.getElementById("searchInput");
+        searchInput.addEventListener("input", searchFacts);
+    </script>
+</body>
+
+</html>
+
