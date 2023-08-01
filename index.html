@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funny Buttons and Input Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .funny-button {
+            background-color: #FFC107;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        .funny-input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #007BFF;
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Funny Buttons and Input Forms</h1>
+    <button class="funny-button" onclick="alert('Hey! You clicked the funny button!')">Funny Button 1</button>
+    <button class="funny-button" onclick="funnyButton2()">Funny Button 2</button>
+    <br>
+    <input type="text" class="funny-input" placeholder="Type something funny...">
+    <br>
+    <button class="funny-button" onclick="showFunnyInput()">Submit</button>
+
+    <script>
+        function funnyButton2() {
+            alert("This button thinks it's a bird... but it is not.");
+        }
+
+        function showFunnyInput() {
+            const inputValue = document.querySelector('.funny-input').value;
+            if (inputValue === '') {
+                alert("You didn't type anything funny!");
+            } else {
+                alert(`You typed: "${inputValue}"`);
+            }
+        }
+    </script>
+</body>
+</html>
+
