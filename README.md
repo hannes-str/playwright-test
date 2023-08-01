@@ -5,15 +5,14 @@
 apt install npm
 ```
 
-- Install Playwright
+- Install Playwright:
 ```
 npm install playwright
 ```
 
-- run test as js: 
+- Run test as js: 
 ```
 npx tsc file.ts
 node file.js
-
 ```
 
