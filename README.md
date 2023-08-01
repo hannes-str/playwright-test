@@ -2,7 +2,7 @@
 
 - Install node:
 ```
-apt install node
+apt install npm
 ```
 
 - Install Playwright
