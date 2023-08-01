@@ -5,9 +5,10 @@
 apt install npm
 ```
 
-- Install Playwright:
+- Install npm packages:
 ```
 npm install playwright
+npm install typescript --save-dev
 ```
 
 - Run test as js: 
